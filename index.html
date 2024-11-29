@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <! displays site properly based on user's device -->
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="./style.css">
@@ -29,37 +29,40 @@
 <body>
 
   <section class="container">
-    <form action="">
+    <form id="myForm" action="">
       <div class="input-container">
         <!-- day form -->
         <label for="day">
           <span>Day</span> <br>
           <input type="number" id="day" placeholder="DD" required>
         </label>
+        <span id="day-err" class="err-msg"></span>
 
         <!-- month forms -->
         <label for="month">
           <span>Month</span><br>
           <input type="number" id="month" placeholder="MM" required>
         </label>
+        <span id="month-err" class="err-msg"></span>
 
         <!-- year forms -->
         <label for="year">
           <span>Year</span><br>
           <input type="number" id="year" placeholder="YYYY" required>
         </label>
+        <span id="year-err" class="err-msg"></span>
       </div>
     </form>
 
     <div class="line-icon-container">
       <hr />
-      <img class="icon-img" src="./assets/images/icon-arrow.svg" alt="Arrow Icon">
+      <img id="arrow-btn" class="icon-img" src="./assets/images/icon-arrow.svg" alt="Arrow Icon">
     </div>
 
     <div class="result-sect">
-      <h3><span class="output-text">--</span> years</h3>
-      <h3><span class="output-text">--</span> months</h3>
-      <h3><span class="output-text">--</span> days</h3>
+      <h3><span id="years-output" class="output-text">--</span> years</h3>
+      <h3><span id="months-output" class="output-text">--</span> months</h3>
+      <h3><span id="days-output" class="output-text">--</span> days</h3>
     </div>
   </section>
 
@@ -68,6 +71,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="https://www.github.com/masumbillah99" target="_blank">Md Masum Billah</a>.
   </div>
+
+  <script src="./script.js"></script>
 
 </body>
 

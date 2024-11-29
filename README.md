@@ -89,8 +89,8 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Website - [masumbillah.com](https://www.masumbillah.netlify.app)
-- LinkedIn - [@yourusername](https://www.linkedin.com/in/mdmasumbillah99/)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/masumbillah99)
+- LinkedIn - [@muhammad masum billah](https://www.linkedin.com/in/mdmasumbillah99/)
+- Frontend Mentor - [@muhammad masum billah](https://www.frontendmentor.io/profile/masumbillah99)
 
 
 <!-- ## Acknowledgments

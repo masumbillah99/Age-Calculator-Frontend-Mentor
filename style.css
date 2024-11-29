@@ -84,6 +84,13 @@ input:focus {
     outline: none;
 }
 
+.err-msg {
+    color: red;
+    font-size: 12px;
+    display: block;
+    margin-top: 5px;
+}
+
 /* form style end */
 
 /* line & icon style start */
@@ -125,3 +132,18 @@ input:focus {
 }
 
 /* result section style end */
+
+
+/* responsive for laptop device */
+@media screen and (max-width: 1366px) {
+    .container {
+        width: 50%;
+    }
+}
+
+/* responsive for mobile device */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 50%;
+    }
+}
