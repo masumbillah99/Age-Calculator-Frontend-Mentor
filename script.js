@@ -12,6 +12,15 @@ const dayError = document.getElementById('day-err');
 const monthError = document.getElementById('month-err');
 const yearError = document.getElementById('year-err');
 
+/** 
+ * understand logic, what / how / another way
+ * notedown logic
+ * how can I do it
+ * fix error styles
+ * compatible for all devices (mobile, laptop, tablet)
+ * add animation when submit
+*/
+
 arrowBtn.addEventListener('click', function () {
     // Clear previous error messages
     dayError.innerText = "";
@@ -25,31 +34,31 @@ arrowBtn.addEventListener('click', function () {
     const date = new Date();
 
     if (dayInput === "" || monthInput === "" || yearInput === "") {
-        if (dayInput === "") dayError.innerText = "This field is require";
-        if (monthInput === "") monthError.innerText = "This field is require";
-        if (yearInput === "") yearError.innerText = "This field is require";
+        if (dayInput === "") dayError.innerText = "This field is required";
+        if (monthInput === "") monthError.innerText = "This field is required";
+        if (yearInput === "") yearError.innerText = "This field is required";
         return;
     }
 
     if (dayInput < 1 || dayInput > 31) {
-        console.error('Must be a valid day');
+        dayError.innerText = 'Must be a valid day';
         return;
     }
 
     if (monthInput < 1 || monthInput > 12) {
-        dayError.innerText = 'Must be a valid month';
+        monthError.innerText = 'Must be a valid month';
         return;
     }
 
     if (yearInput > date.getFullYear()) {
-        monthError.innerText = 'Must be in the past';
+        yearError.innerText = 'Must be in the past';
         return;
     }
 
     // Validate if the date is valid (e.g. 31/04/1991)
     const inputDate = new Date(yearInput, monthInput - 1, dayInput); // month is 0-indexed in JavaScript
     if (inputDate.getDate() !== parseInt(dayInput) || inputDate.getMonth() + 1 !== parseInt(monthInput) || inputDate.getFullYear() !== parseInt(yearInput)) {
-        yearError.innerText = `Invalid date, e.g., 31/${monthInput}/${yearInput}`;
+        yearError.innerText = `Invalid date - ${dayInput}/${monthInput}/${yearInput}`;
         return;
     }
 
